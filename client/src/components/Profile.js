@@ -23,7 +23,7 @@ const Profile = () => {
                 throw new Error('Authentication required');
             }
 
-            const response = await fetch(`http://localhost:5000/api/users/${userId}`, {
+            const response = await fetch(`https://bookloop-platform.onrender.com/api/users/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -47,7 +47,7 @@ const Profile = () => {
                 throw new Error('Authentication required');
             }
 
-            const response = await fetch(`http://localhost:5000/api/requests/user/${userId}`, {
+            const response = await fetch(`https://bookloop-platform.onrender.com/api/requests/user/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -67,7 +67,7 @@ const Profile = () => {
 
     const fetchUserFulfillments = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/requests/fulfilled/${userId}`, {
+            const response = await fetch(`https://bookloop-platform.onrender.com/api/requests/fulfilled/${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

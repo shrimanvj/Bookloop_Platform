@@ -33,7 +33,7 @@ const Upload = () => {
     const fetchRequestDetails = async () => {
         try {
             console.log('Fetching request details for ID:', requestId);
-            const response = await fetch(`http://localhost:5000/api/requests/${requestId}`, {
+            const response = await fetch(`https://bookloop-platform.onrender.com/api/requests/${requestId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -102,7 +102,7 @@ const Upload = () => {
 
         try {
             console.log('Uploading file for request:', requestId);
-            const response = await fetch(`http://localhost:5000/api/upload/${requestId}`, {
+            const response = await fetch(`https://bookloop-platform.onrender.com/api/upload/${requestId}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`

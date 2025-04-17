@@ -14,7 +14,7 @@ const Discussion = () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/messages/${bookId}`);
+            const response = await axios.get(`https://bookloop-platform.onrender.com/api/messages/${bookId}`);
             setMessages(response.data);
             setLoading(false);
         } catch (error) {
@@ -28,7 +28,7 @@ const Discussion = () => {
         if (!newMessage.trim()) return;
 
         try {
-            const response = await axios.post(`http://localhost:5000/api/messages/${bookId}`, {
+            const response = await axios.post(`https://bookloop-platform.onrender.com/api/messages/${bookId}`, {
                 userId: localStorage.getItem('userId') || 'anonymous',
                 content: newMessage.trim()
             });
